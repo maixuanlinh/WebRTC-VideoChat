@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Sidebar = ({ children }) => {
+const SideBar = ({ children }) => {
   const { me, callAccepted, name, setName, callEnded, leaveCall, callUser } = useContext(SocketContext);
   const [idToCall, setIdToCall] = useState('');
   const classes = useStyles();
@@ -77,4 +77,4 @@ const Sidebar = ({ children }) => {
   );
 };
 
-export default Sidebar;
+export default SideBar;

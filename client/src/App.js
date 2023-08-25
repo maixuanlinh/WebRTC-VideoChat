@@ -3,7 +3,7 @@ import { Typography, AppBar } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 import VideoPlayer from './components/VideoPlayer';
-import Sidebar from './components/Sidebar.jsx';
+import SideBar from './components/SideBar.jsx';
 import Notifications from './components/Notifications';
 
 const useStyles = makeStyles((theme) => ({
@@ -41,9 +41,9 @@ const App = () => {
         <Typography variant="h2" align="center">SSH Video Call</Typography>
       </AppBar>
       <VideoPlayer />
-      <Sidebar>
+      <SideBar>
         <Notifications />
-      </Sidebar>
+      </SideBar>
     </div>
   );
 };

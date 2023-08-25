@@ -6,7 +6,7 @@ import "./styles.css";
 import { ContextProvider } from './SocketContext';
 ReactDOM.render(
     <ContextProvider>
-        <App />
+        <App /> 
         </ContextProvider>
 
 , document.getElementById('root'));

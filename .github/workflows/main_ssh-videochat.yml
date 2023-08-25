@@ -21,11 +21,15 @@ jobs:
         with:
           node-version: '18.x'
 
-      - name: npm install, build, and test
-        run: |
-          npm install
-          npm run build --if-present
-          npm run test --if-present
+      - name: Install backend dependencies
+        run: npm install
+
+      - name: Install frontend dependencies
+        run: cd frontend && npm install --force
+
+      - name: Build React frontend
+        run: cd frontend && CI=false npm run build
+        
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2

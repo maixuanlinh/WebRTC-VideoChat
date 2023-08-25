@@ -4,7 +4,8 @@ import Peer from 'simple-peer';
 
 const SocketContext = createContext();
 
-const socket = io('http://localhost:5000');
+const serverUrl = "ssh-videochat.azurewebsites.net"
+const socket = io(serverUrl);
 
 
 const ContextProvider = ({ children }) => {

@@ -14,7 +14,7 @@ const ContextProvider = ({ children }) => {
   const [name, setName] = useState('');
   const [call, setCall] = useState({});
   const [me, setMe] = useState('');
-  
+
   const myVideo = useRef();
   const userVideo = useRef();
   const connectionRef = useRef();
@@ -53,6 +53,7 @@ const ContextProvider = ({ children }) => {
   };
 
   const callUser = (id) => {
+    console.log('callUser');
     const peer = new Peer({ initiator: true, trickle: false, stream });
 
     peer.on('signal', (data) => {
